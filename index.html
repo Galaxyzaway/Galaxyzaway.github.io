@@ -11,13 +11,19 @@ body, html {
   height: 100%;
 }
 
-.parallax {
-  /* The image used */
-  background-image: url('Nelson-at-sunset-2019-11-Sophie-T.jpg');
+.parallaxtop {
+  background-image: url('Nelson-at-sunset-2019-11-Sophie-top2.png');
+  height: 444px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  /* Full height */
-  height: 666px;
-
+.parallaxbottom {
+  background-image: url('Nelson-at-sunset-2019-11-Sophie-bottom.png');
+  height: 444px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -27,7 +33,7 @@ body, html {
 
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
-  .parallax {
+  .parallaxtop {
     background-attachment: scroll;
   }
 }
@@ -35,7 +41,7 @@ body, html {
 <body class="w3-light-grey">
 
 <!-- Page Container -->
-<div class="parallax"></div>
+<div class="parallaxtop"></div>
 
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
@@ -154,7 +160,7 @@ body, html {
 
   <!-- End Page Container -->
 </div>
-
+<div class="parallaxbottom"></div>
 <footer class="w3-container sky-purple w3-center w3-margin-top">
   <p>Find me on social media.</p>
   <i class="fa fa-facebook-official w3-hover-opacity"></i>
